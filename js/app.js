@@ -16,6 +16,14 @@ App.config(function($routeProvider, $locationProvider) {
 			templateUrl: 'iniciosesion.html',
 			controller: 'IniciarSesionController'
 		})
+		.when('/registrarcatalogo', {
+			templateUrl: 'RegistrarCatalogo.html',
+			controller: 'RegistrarCatalogoController'
+		})
+		.when('/registrarcotizacion', {
+			templateUrl: 'registrarCotizacion.html',
+			controller: 'RegistrarCotizacionController'
+		})
 		.otherwise({
         	redirectTo: '/iniciosesion'
 		});
