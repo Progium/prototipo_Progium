@@ -1,4 +1,4 @@
-html{background-color: #f39c12;position: relative;min-height: 100%;overflow-x:hidden;}
+html{background-color:#f39c12;position: relative;min-height: 100%;overflow-x:hidden;}
 body{background-color: transparent;color:#656565;font-size:13px;overflow-x: hidden;}
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family:'Open Sans',"HelveticaNeue", "Helvetica Neue", Helvetica, Arial,sans-serif;
@@ -12,6 +12,9 @@ a:hover, a:focus{text-decoration:none;}
           box-shadow: none;
 }
 img{max-width: 100%}
+
+.imgbanner{width: 530px;margin: 0px 330px;}
+
 /*primary nav*/
 .nav-primary:before, .nav-primary:after {display: table;content: " ";}
 .nav-primary:after {clear: both;}
@@ -87,7 +90,7 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge{color: #3a5
 .progress-mini{height: 6px}
 .progress-small{height: 10px}
 .progress-small .progress-bar{font-size: 10px;line-height: 1em}
-.navbar{background-color: #fff}
+.navbar{background-color: #162636}
 .navbar .nav .open > a, .navbar .nav .open > a:hover, .navbar .nav .open > a:focus{background: transparent;}
 .list-normal{background: transparent;}
 .list-normal > .list-group-item{border-radius: 0;border-width: 1px 0;background: transparent}
@@ -375,7 +378,7 @@ input[type="text"], select, textarea{min-width: 40px;height: auto;}
 
 /* Site CSS */
 /* Header */
-.navbar{border:none;border-bottom: 1px solid #d1d4d7;box-shadow:0 0 5px rgba(0,0,0,.1);z-index: 1010;border-radius: 0;padding:0;margin-bottom: 0}
+.navbar{border:none;border-bottom: 1px solid #f39c12;box-shadow:0 0 5px rgba(0,0,0,.1);z-index: 1010;border-radius: 0;padding:0;margin-bottom: 0}
 .navbar.bg{border-bottom: 1px solid #162636;}
 .navbar-brand{font-size: 28px;min-width:90px;font-family: "Times New Roman", Georgia, serif;font-style: italic;font-weight: 700;padding: 12px 0 18px 0;text-align: center;}
 .navbar-brand img{max-height: 50px}
@@ -511,7 +514,7 @@ input[type="text"], select, textarea{min-width: 40px;height: auto;}
   .nav-vertical.nav-icon > ul > li > a i{margin: 8px auto;}
   .nav-primary.nav-vertical > ul > li > a > .badge{position: absolute;top: 4px;right: 15px;font-size: 11px;padding:3px 6px}
 
-  #nav{position: relative;width: 150px;position: absolute;z-index:1000;left:0;top:50px;bottom: 0;border-right:1px solid #162636}
+  #nav{position: relative;width: 150px;position: absolute;z-index:1000;left:0;top:117px;bottom: 0;border-right:1px solid #162636}
   #nav.bg-light{border-color:#bfc7d0}
   #nav.nav-vertical {width: 90px}
   #nav + #content{padding-left: 150px;}
