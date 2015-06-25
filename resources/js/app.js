@@ -38,6 +38,10 @@ App.config(function($routeProvider, $locationProvider) {
 			templateUrl: 'modulos/catering/catering-buscar.html',
 			controller: 'CateringBuscarController'
 		})
+		.when('/listar-catering', {
+			templateUrl: 'modulos/catering/catering-listar.html',
+			controller: 'CateringListarController'
+		})
 		.when('/producto-registrar', {
 			templateUrl: 'modulos/producto/producto-registrar.html',
 			controller: 'ProductoRegistrarController'
@@ -45,6 +49,14 @@ App.config(function($routeProvider, $locationProvider) {
 		.when('/cotizacion-registrar', {
 			templateUrl: 'modulos/cotizacion/cotizacion-registrar.html',
 			controller: 'CotizacionRegistrarController'
+		})
+		.when('/subasta-registrar', {
+			templateUrl: 'modulos/subasta/subasta-registrar.html',
+			controller: 'SubastaRegistrarController'
+		})
+		.when('/paquete-registrar', {
+			templateUrl: 'modulos/paquete/paquete-registrar.html',
+			controller: 'PaqueteRegistrarController'
 		})
 		.otherwise({
         	redirectTo: '/iniciar-sesion'
