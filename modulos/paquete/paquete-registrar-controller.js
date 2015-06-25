@@ -10,10 +10,14 @@ App.controller('PaqueteRegistrarController', function($scope) {
         valor: 1
     };
     
-     $scope.myData = [{name: "Moroni", age: 50},
-                     {name: "Tiancum", age: 43},
-                     {name: "Jacob", age: 27},
-                     {name: "Nephi", age: 29},
-                     {name: "Enos", age: 34}];
-    $scope.gridOptions = { data : 'myData' };
+     $scope.productos = [{
+        nombre: "Arroz con pollo",
+        costo: "2700"
+    }, {
+        nombre: "Carne en salsa",
+        costo: "2600"
+    },{
+        nombre: "Lasaña de carne",
+        costo: "2800"
+    }];
 });
