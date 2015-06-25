@@ -58,6 +58,10 @@ App.config(function($routeProvider, $locationProvider) {
 			templateUrl: 'modulos/paquete/paquete-registrar.html',
 			controller: 'PaqueteRegistrarController'
 		})
+		.when('/listar-cotizacion', {
+			templateUrl: 'modulos/cotizacion/cotizacion-listar.html',
+			controller: 'CotizacionListarController'
+		})
 		.otherwise({
         	redirectTo: '/iniciar-sesion'
 		});

@@ -1,0 +1,49 @@
+<section class="main padder" ng-controller="CotizacionListarController">
+    <div class="clearfix">
+        <h4><i class="fa fa-table"></i>Lista cotizaciones</h4>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <section class="panel">
+                <div>
+                    <table class="table table-striped m-b-none text-small">
+                        <thead>
+                            <tr>
+                                <th>Nombre Usuario</th>
+                                <th>Fecha Evento</th>
+                                <th>Hora Evento</th>
+                                <th>Ubicacion Evento</th>
+                                <th>Estado</th>
+                                <th width="70"></th>
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="cotizacion in listaCotizaciones">
+                            <tr>
+                                <td>
+                                    {{cotizacion.nombre}}
+                                </td>
+                                <td>
+                                    {{cotizacion.fecha}}
+                                </td>
+                                <td>
+                                    {{cotizacion.hora}}
+                                </td>
+                                <td>
+                                    {{cotizacion.ubicacion}}
+                                </td>
+                                <td>
+                                    {{cotizacion.estado}}
+                                </td>
+                                <td class="text-right">
+                                    <div class="btn-group">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-pencil"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>

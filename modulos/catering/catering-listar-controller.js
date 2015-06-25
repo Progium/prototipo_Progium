@@ -1,12 +1,12 @@
 'use strict';
 
 /**
- * ListarCateringController
+ * CateringListarController
  * @constructor
  */
  
  
-App.controller('ListarCateringController', function($scope) {
+App.controller('CateringListarController', function($scope) {
     
     
 });
