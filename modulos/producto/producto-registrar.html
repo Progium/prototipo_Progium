@@ -1,59 +1,49 @@
 <!-- .sidebar -->
 <section class="main padder" ng-controller="ProductoRegistrarController">
+  <div class="clearfix">
+    <h4><i class="fa fa-edit"></i>Registar Cátalogo</h4>
+  </div>
   <div class="row">
-    <div class="col-lg-5  col-lg-offset-3">
+    <div class="col-sm-6">
       <section class="panel">
-        <header class="panel-heading text-center">
-          Crear Catálogo
-        </header>
-        <div class="panel-body" ng-controlller="RegistrarCatalogoController">
+        <div class="panel-body">
           <form class="form-horizontal" method="get" data-validate="parsley">
             <div class="form-group">
-
               <label class="col-lg-3 control-label">Tipo</label>
-              <div class="col-lg-5">
-                <select ng-model="seleccionarTipos" ng-options="tipo as tipo.nombre for tipo in tipos">
+              <div class="col-lg-8">
+                <select ng-model="seleccionarTipos" class="form-control" ng-options="tipo as tipo.nombre for tipo in tipos">
                 </select>
               </div>
             </div>
-
-            <!--<div ng-controller="RegistrarCatalogoController">
-                    <select ng-model="selectedItem" 
-                    ng-options="item as item.name for item in items"></select>
-                    {{selectedItem | json}}
-                  </div> -->
-
             <div class="form-group">
-              <label class="col-lg-3 control-label">Catalogo</label>
-              <div class="col-lg-5">
-                <select ng-model="seleccionarCatalogos" ng-options="catalogo as catalogo.nombre for catalogo in catalogos" required>
+              <label class="col-lg-3 control-label">Catálogo</label>
+              <div class="col-lg-8">
+                <select ng-model="seleccionarCatalogos" class="form-control" ng-options="catalogo as catalogo.nombre for catalogo in catalogos" required>
                 </select>
               </div>
             </div>
-
             <div class="form-group">
               <label class="col-lg-3 control-label">Producto</label>
-              <div class="col-lg-5">
-                <select ng-model="seleccionarProductos" ng-options="producto as producto.nombre for producto in productos">
+              <div class="col-lg-8">
+                <select ng-model="seleccionarProductos" class="form-control" ng-options="producto as producto.nombre for producto in productos">
                 </select>
               </div>
             </div>
-
             <div class="form-group">
               <label class="col-lg-3 control-label">Precio</label>
-              <div class="col-lg-5">
-                <input type="text" name="precio" required>
+              <div class="col-lg-8">
+                <input type="text" name="precio" class="form-control" required>
               </div>
             </div>
             <div class="form-group">
               <label class="col-lg-3 control-label">Descripción</label>
-              <div class="col-lg-5">
-                <textarea name="descrip" class="form-control" style="max-width: 207px; max-height: 130px; resize: none;"></textarea>
+              <div class="col-lg-8">
+                <textarea name="descrip" rows="5"  class="form-control" data-trigger="keyup" data-rangelength="[20,200]"></textarea>
               </div>
             </div>
             <div class="form-group">
               <label class="col-lg-3 control-label">Mis catering</label>
-              <div class="col-lg-5">
+              <div class="col-lg-8">
                 <label ng-repeat="catering in caterings">
                   <input type="checkbox" ng-model="seleccionar" checklist-value="catering"> {{catering.nombre}}
                 </label>
@@ -61,14 +51,20 @@
             </div>
             <div class="form-group">
               <label class="col-lg-3 control-label">Fotografía</label>
-              <div class="col-lg-5">
-                <img src="resources/first/src/images/arroz.jpg" alt="Arroz" />
+              <div class="col-lg-9 media">
+                <div class="bg-light pull-left text-center media-large thumb-large"><i class="fa fa-user inline fa fa-cutlery fa fa-3x m-t-large m-b-large"></i></div>
+                <div class="media-body">
+                  <input type="file" name="file" title="Examinar" class="btn btn-sm btn-info m-b-small">
+                  <br>
+                  <button class="btn btn-sm btn-default">Eliminar</button>
+                </div>
               </div>
             </div>
           </form>
           <br>
           <div class="form-group">
-            <div class="col-lg-9 col-lg-offset-5">
+            <div class="col-lg-9 col-lg-offset-3">
+              <button type="submit" class="btn btn-white">Cancelar</button>
               <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
           </div>
