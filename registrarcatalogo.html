@@ -1,6 +1,5 @@
 <!DOCTYPE html>
   <html lang="es">
-  
   <head>
     <meta charset="utf-8">
     <title>Catering App</title>
@@ -22,7 +21,7 @@
             	  Crear Catálogo 
               </header>
               <div class="panel-body" ng-controlller="RegistrarCatalogoController">
-  	      		  <form class="form-horizontal" method="get" data-validate="parsley">
+  	      		  <form name="registroCatalogo" class="form-horizontal" method="get" data-validate="parsley">
                   <div class="form-group">
                     
                     <label class="col-lg-3 control-label">Tipo</label>
@@ -57,7 +56,8 @@
                   <div class="form-group">
                     <label class="col-lg-3 control-label">Precio</label>
                     <div class="col-lg-5">
-                      <input type="text"  name="precio" required>
+                      <input type="text"  name="precio" required/>
+                      <span class="error" ng-show="registroCatalogo.precio.$error.required">Requerido</span>
                     </div>
                   </div>   
                   <div class="form-group">
@@ -73,13 +73,18 @@
                         <input type="checkbox" ng-model="seleccionar" checklist-value="catering"> {{catering.nombre}}
                       </label>
                     </div>
-  						    </div> 
+  						    </div>
   						    <div class="form-group">
-  							    <label class="col-lg-3 control-label">Fotografía</label>
-  							    <div class="col-lg-5">
-  								     <img src="resources/imagenes/arroz.jpg" alt="Arroz"/>
-  								  </div>
-  						    </div> 
+                  <label class="col-lg-3 control-label">Fotografía</label>
+                  <div class="col-lg-9 media">
+                    <div class="bg-light pull-left text-center media-large thumb-large"><i class="fa fa-cutlery inline fa fa-light fa fa-3x m-t-large m-b-large"></i></div>
+                    <div class="media-body">
+                      <button class="btn btn-sm btn-default">Subir</button>
+                      <div></div>
+                      <button class="btn btn-sm btn-default">Eliminar</button>
+                    </div>
+                  </div>
+                </div>
                 </form>
               <br>
 	                <div class="form-group">

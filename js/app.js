@@ -20,6 +20,10 @@ App.config(function($routeProvider, $locationProvider) {
 			templateUrl: 'buscarcatering.html',
 			controller: 'BuscarCateringController'
 		})
+		.when('/registrarpaquete', {
+			templateUrl: 'registrarpaquete.html',
+			controller: 'RegistrarPaqueteController'
+		})
 		.otherwise({
         	redirectTo: '/iniciosesion'
 		});
