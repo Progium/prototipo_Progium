@@ -4,7 +4,11 @@
  * RegistrarCotizacionController
  * @constructor
  */
-App.controller('RegistrarCotizacionController', function($scope) {
 
-  $scope.date = new Date(), 'dd/mm/yyyy'
+App.controller('RegistrarCotizacionController', function($scope) {
+    
+    
+    $scope.cantidad = {
+       valor: 1
+   };
 });

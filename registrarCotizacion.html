@@ -1,4 +1,4 @@
-<html lang="es">
+<html>
   
   <head>
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="resources/first/src/css/font.css">
     <link rel="stylesheet" href="resources/first/src/css/style.css">
   </head>
-  <body>
+  <body ng-contr="RegistrarCotizacionController">
     <section id="content">
       <!-- .sidebar -->
       <section class="main padder">
@@ -25,7 +25,7 @@
                 <div  class="form-group">
                   <label class="col-lg-3 control-label">Fecha inicio evento</label>
                     <div class="col-lg-5">
-                      <input type="date" name="fechaInicio"/>>
+                      <input type="date" name="fechaInicio"/>
                     </div>
                 </div>
                 <div  class="form-group">
@@ -46,24 +46,33 @@
 								    <textarea name="lugar" class="form-control" style="max-width: 207px; max-height: 130px; resize: none;"></textarea>
 							    </div>
 						    </div> 
-						    <div class="form-group">
-							    <label class="col-lg-3 control-label">Cantidad de personas</label>
-							    <div class="col-lg-5">
-								    <input type="text"  name="cantPersonas">
-								  </div>
-						    </div> 
-						    <div class="form-group">
-							    <label class="col-lg-3 control-label">Cantidad de saloneros</label>
-							    <div class="col-lg-5">
-								    <input type="text"  name="cantSaloneros">
-								  </div>
-						    </div> 
+						    
+               <div class="form-group">
+     	           <label class="col-lg-3 control-label">Cantidad de personas</label>
+     	           <div class="col-lg-5">
+     	             <input type="number" name="cantPersonas" ng-model="cantidad.valor" min="1" max="99" required/>
+     	              <span class="error" ng-show="registroPaquete.cantPersonas.$error.required">Requerido</span>
+                    <span class="error" ng-show="registroPaquete.cantPersonas.$error.number">Not valid number!</span>
+     	            </div>
+     	          </div>  
+               <div class="form-group">
+     	           <label class="col-lg-3 control-label">Cantidad de saloneros</label>
+     	           <div class="col-lg-5">
+     	             <input type="number" name="cantPersonas" ng-model="cantidad.valor" min="1" max="99" required/>
+     	              <span class="error" ng-show="registroPaquete.cantPersonas.$error.required">Requerido</span>
+                    <span class="error" ng-show="registroPaquete.cantPersonas.$error.number">Not valid number!</span>
+     	            </div>
+     	          </div> 
 						    <div class="form-group">
 							    <label class="col-lg-3 control-label">Ayudante cocina</label>
 							    <div class="col-lg-5">
 								    <input type="radio" name="ayudanteCoc" value="si">Si
                     <input type="radio" name="ayudanteCoc" value="no"  checked>No
 								  </div>
+						    </div>
+						    <div class="form-group">
+							    <label class="col-lg-3 control-label">Productos</label>
+							    <div class="gridStyle" ng-grid="gridOptions"></div>
 						    </div> 
               </form>
               <br>

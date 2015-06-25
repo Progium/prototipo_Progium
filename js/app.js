@@ -24,6 +24,10 @@ App.config(function($routeProvider, $locationProvider) {
 			templateUrl: 'registrarCotizacion.html',
 			controller: 'RegistrarCotizacionController'
 		})
+		.when('/listarCatering', {
+			templateUrl: 'listarCatering.html',
+			controller: 'ListarCateringController'
+		})
 		.otherwise({
         	redirectTo: '/iniciosesion'
 		});
